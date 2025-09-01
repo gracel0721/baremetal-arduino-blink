@@ -11,4 +11,5 @@ default:
 
 .PHONY: deploy
 deploy:
+# set "/dev/ttyACM0" to the port your arduino is connected to
 	avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:helloarduino.hex
