@@ -15,16 +15,16 @@ int main(void){
 // Default clock source is internal 8MHz RC oscillator
 
 
-//Set pin 13 (built in led) as output
+//Set pin 6 as output
     DDRD |= (1 << DDD6);
 
     while (1)
     {
-        //set pin 13 high
+        //set pin 6 high
         PORTD |= (1 << PORTD6);
         _delay_ms(1000);
 
-        //set pin 13 low
+        //set pin 6 low
         PORTD &= ~(1 << PORTD6);
         _delay_ms(1000);
     }
